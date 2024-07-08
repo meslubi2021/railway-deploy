@@ -1,4 +1,4 @@
-name: 'Railway Deploy'
+name: 'Railway Deploy Patch'
 description: 'Simple Action to Deploy Railway App using Railway CLI'
 inputs:
   railway_token:  # railway token
