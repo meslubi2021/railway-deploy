@@ -7,7 +7,8 @@ RUN apk add curl && apk add tar
 # Set the version ourself
 ENV RAILWAY_VERSION=3.0.19
 
-RUN curl -fsSL cli.new | sh
+# https://docs.railway.app/guides/cli#installing-the-cli , Railway can't figure out how to stabilize cli.new DNS
+npm i -g @railway/cli
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
